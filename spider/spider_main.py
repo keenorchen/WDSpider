@@ -25,18 +25,11 @@ class SpiderMain(object):
 
 # 程序入口
 if __name__ == '__main__':
+
     # 网贷之家URL
     url_wdzj = "http://shuju.wdzj.com/plat-data-custom.html/"
-    date_str = ''
-    if len(argv) == 1:
-        date_str = datetime.now().strftime('%Y-%m-%d')
-        date_str += date_str
-    elif len(argv) == 2:
-        date_str = argv[1] + argv[1]
-    elif len(argv) == 3:
-        date_str = argv[1] + argv[2]
-    else:
-        raise ValueError('输入参数值个数有误，多了个%s' % argv[4])
+    date_str = datetime.now().strftime('%Y-%m-%d')
+    date_str += date_str
     form_data = {'type': '0',
                  'shujuDate': date_str
                  }
